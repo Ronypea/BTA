@@ -37,12 +37,6 @@ def get_ticket(i,iata_dep, iata_ar, time_dep, time_ar):
 
     return suitable_fl
 
-data_from_Igor = {'departure': '',
-                  'arival': '',
-                  'time_dep': 'гггг-мм-дд',
-                  'time_ar': '',
-                  'status':''}
-
 def check(city): 
     with open('IATA.csv') as data: 
         reader = csv.DictReader(data) 
