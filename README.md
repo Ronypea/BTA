@@ -49,8 +49,8 @@ Business trip assistant: We make business easier
 
 ### Пример работы программы
 ![image_alt](https://user-images.githubusercontent.com/29158476/26972194-60b50cb6-4d19-11e7-9efd-4f439c7c8d94.jpg)
-Интересный факт: если навести курсор на самолётик, то он улетит!
 ![image alt](https://user-images.githubusercontent.com/29158476/26972193-60b2f28c-4d19-11e7-900b-4bacb7cd5462.jpg)
+##### Интересный факт: если навести курсор на самолётик, то он улетит! 
 ![image_alt](https://user-images.githubusercontent.com/29158476/26972196-60bf7098-4d19-11e7-8d19-19b155c43bf4.png)
 ![image_alt](https://user-images.githubusercontent.com/29158476/26972195-60b43dae-4d19-11e7-85bd-65300658c837.png)
 <img width="962" alt="google" src="https://user-images.githubusercontent.com/29158476/26973899-70408f22-4d21-11e7-9b42-673d4f4df24e.png">
