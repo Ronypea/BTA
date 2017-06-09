@@ -52,12 +52,6 @@ def choose_hotel(hotels, status): #выборка отеля
     else:
         return this_one_cheap
 
-data_from_Igor = {'departure': 'Moscow',
-                   'arrival': 'Prague',
-                   'time_dep': '2017-07-13',
-                   'time_ar': '2017-08-13',
-                   'adress': 'Slezská 11',
-                   'status': 'comfort'}
 
 def check(adress): 
     try: 
