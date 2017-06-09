@@ -41,8 +41,8 @@ Business trip assistant: We make business easier
 Когда новый аккаунт создает свою первую запись, то сначала надо разрешить доступ приложения к данным календаря, после чего это не требуется.
 
 ### Пример работы программы
-![image alt](https://user-images.githubusercontent.com/29158476/26972193-60b2f28c-4d19-11e7-900b-4bacb7cd5462.jpg)
 ![image_alt](https://user-images.githubusercontent.com/29158476/26972194-60b50cb6-4d19-11e7-9efd-4f439c7c8d94.jpg)
+![image alt](https://user-images.githubusercontent.com/29158476/26972193-60b2f28c-4d19-11e7-900b-4bacb7cd5462.jpg)
 ![image_alt](https://user-images.githubusercontent.com/29158476/26972195-60b43dae-4d19-11e7-85bd-65300658c837.png)
 ![image_alt](https://user-images.githubusercontent.com/29158476/26972196-60bf7098-4d19-11e7-8d19-19b155c43bf4.png)
 
