@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    {% load staticfiles %}
+    <link href="{% static 'css/style3.css' %}" rel="stylesheet" type="text/css">
+    <title>Your trips</title>
+</head>
+<body>
+    <a href="/trip/">
+        <table id="header" align="center">
+            <tr>
+                <td><img src="{% static 'img/plane.gif' %}" width="300" class="plane" /></td>
+                <td align="right"><img src="{% static 'img/logo.gif' %}" width="300" /></td>
+            </tr>
+        </table>
+    </a>
+    <table id="nav" align="left">
+        <tr>
+            <td><h3>Hello, {{username}}</h3></td>
+        </tr>
+        <tr>
+            <td><a href="/trips/"><p>Your trips</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="/trip/"><p>New trip</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="/office/"><p>New Office</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="https://calendar.google.com"><p>Your Google Calendar</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="/logout/"><p>Log out</p></a></td>
+        </tr>
+    </table>
+    <h1>Your Trips</h1>
+    <table id="content" align="center">
+        <tr>
+            <th>
+                <h3>Start time</h3>
+            </th>
+            <th>
+                <h3>Finish time</h3>
+            </th>
+            <th>
+                <h3>Departure</h3>
+            </th>
+            <th>
+                <h3>Arrival</h3>
+            </th>
+            <th>
+                <h3>Details</h3>
+            </th>
+        </tr>
+        {% for t in trips %}
+            <tr>
+                <th>
+                    <p>{{t.start_time}}</p>
+                </th>
+                <th>
+                    <p>{{t.finish_time}}</p>
+                </th>
+                <th>
+                    <p>{{t.departure}}</p>
+                </th>
+                <th>
+                    <p>{{t.arrival}}</p>
+                </th>
+
+                <th>
+                    <a href="/trips/{{t.id}}"><p style="font-style:italic">See more</p></a>
+                </th>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr />
+    <table id="footer">
+        <tr>
+            <td>
+                <p>Designed by Plotnikova Veronika & Khalepskiy Igor</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

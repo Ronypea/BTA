@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    {% load rest_framework %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="{% static 'css/style3.css' %}" rel="stylesheet" type="text/css">
+    <title>Registration</title>
+</head>
+<body>
+        <table id="header" align="center">
+            <tr>
+                <td><img src="{% static 'img/plane.gif' %}" width="300" class="plane" /></td>
+                <td align="right"><img src="{% static 'img/logo.gif' %}" width="300" /></td>
+            </tr>
+        </table>
+    <table id="content" align="center">
+        <tr>
+            <th>
+                <h1>Registration</h1>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <form method="POST" action="{% url 'registration' %}">
+                    {% csrf_token %}
+                    {% render_form serializer %}
+                    <button type="submit" class="btn btn-default" style="margin-left:200px">Create</button>
+                </form>
+            </th>
+        </tr>
+    </table>
+    <a href="/login/"><p style="font-family: sans-serif; font-size: 16px; margin-top: 15px;" align="center">Already registered? Log in!</p></a>
+    <hr />
+    <table id="footer">
+        <tr>
+            <td>
+                <p>Designed by Plotnikova Veronika & Khalepskiy Igor</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

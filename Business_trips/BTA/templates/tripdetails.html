@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    {% load staticfiles %}
+    <link href="{% static 'css/style3.css' %}" rel="stylesheet" type="text/css">
+    <title>Your trip</title>
+</head>
+<body>
+    <a href="/trip/">
+    <table id="header" align="center">
+        <tr>
+            <td><img src="{% static 'img/plane.gif' %}" width="300" class="plane"/></td>
+            <td align="right"><img src="{% static 'img/logo.gif' %}" width="300" /></td>
+        </tr>
+    </table>
+    </a>
+    <table id="nav" align="left">
+        <tr>
+            <td><h3>Hello, {{username}}</h3></td>
+        </tr>
+        <tr>
+            <td><a href="/trips/"><p>Your trips</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="/trip/"><p>New trip</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="/office/"><p>New Office</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="https://calendar.google.com"><p>Your Google Calendar</p></a></td>
+        </tr>
+        <tr>
+            <td><a href="/logout/"><p>Log out</p></a></td>
+        </tr>
+    </table>
+    <table align="right" id="del">
+        <tr>
+            <th>
+                <form method="post">
+                <button type="submit" class="btn btn-default">Delete Trip</button>
+                    </form>
+            </th>
+        </tr>
+    </table>
+    <table id="content" align="center">
+        <tr>
+            <th><h1>Your Trip</h1></th>
+            <th>
+                <p>to {{trip.arrival}}</p>
+                <p>on {{trip.start_time}}</p>
+            </th>
+        </tr>
+        <tr>
+            <th><h3>Flight</h3></th>
+            <th>{{t.flight}}<br />
+            {{trip.flight_price}} euro<br />
+            departure: {{trip.departure_at}}<br />
+            arrival: {{trip.return_at}}<br />
+            </th>
+        </tr>
+        <tr>
+            <th><h3>Hotel</h3></th>
+            <th>{{trip.hotel}}<br />
+            {{trip.hotel_price}} euro per trip<br />
+            {{trip.hotel_stars}} stars</th>
+        </tr>
+        <tr>
+            <th>
+                <h3>Meetings</h3>
+                <a href="/trips/{{trip.id}}/meeting/"><h5>Add new</h5></a>
+                </th>
+            <th>
+                {% for i in meetings %}
+                <ul>
+                    <li><a href="/trips/{{trip.id}}/meetings/{{i.id}}/"> with {{i.person}} </a></li>
+                </ul>
+                {% endfor %}
+            </th>
+        </tr>
+    </table>
+    <hr />
+    <table id="footer">
+        <tr>
+            <td>
+                <p>Designed by Plotnikova Veronika & Khalepskiy Igor</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
